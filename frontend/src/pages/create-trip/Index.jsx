@@ -56,7 +56,7 @@ function CreateTrip() {
         const authData = {userID : userData._id,userSelection : formData, travelPlan : tripObjDataPlan}
         const authDataStringyFy = JSON.stringify(authData)
 
-        axios.post("http://localhost:5000/api/trips",authDataStringyFy,{
+        axios.post("https://trip-planner-wheat-omega.vercel.app/api/trips",authDataStringyFy,{
         headers: {
             "Content-Type": "application/json"
         }}).then((res) => {

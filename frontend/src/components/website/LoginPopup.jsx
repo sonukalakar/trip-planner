@@ -39,7 +39,7 @@ const LoginPopup = () => {
             toast.error("All Fields Are Required!!")
             return;
         }
-        await axios.post("http://localhost:5000/api/register",newUser, {
+        await axios.post("https://trip-planner-wheat-omega.vercel.app/api/register",newUser, {
             headers : {
                 "Content-Type" : "application/json"
             }
@@ -101,7 +101,7 @@ const LoginPopup = () => {
     const userStringy = JSON.stringify(userDetail);
     // cross verify
   
-    await axios.post("http://localhost:5000/api/login",userStringy,{headers : {'Content-Type' : 'application/json'}}).then((res) => {
+    await axios.post("https://trip-planner-wheat-omega.vercel.app/api/login",userStringy,{headers : {'Content-Type' : 'application/json'}}).then((res) => {
         
         localStorage.setItem("user", JSON.stringify(res.data.user))
         setUserData(res.data.user)

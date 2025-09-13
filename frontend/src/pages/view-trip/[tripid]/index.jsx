@@ -13,7 +13,7 @@ function ViewTrip() {
         if(!tripid) {
             return;
         }
-        const response = await axios.get(`http://localhost:5000/api/trips/${tripid}`);
+        const response = await axios.get(`https://trip-planner-wheat-omega.vercel.app/api/trips/${tripid}`);
         const resData = await response.data;
         setTripData(resData.tripData.travelPlan)    
     }  
